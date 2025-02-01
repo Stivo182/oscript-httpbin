@@ -552,6 +552,32 @@
 	Ответ.Заголовки["Content-Type"] = "application/xml";
 КонецПроцедуры
 
+&ТочкаМаршрута("json")
+&GET
+Процедура ТочкаJson(Ответ) Экспорт
+
+	Ответ.УстановитьТипКонтента("json");
+	Ответ.ТелоТекст = "{
+	|	""title"": ""Sample Slide Show"",
+	|	""date"": ""date of publication"",
+	|	""author"": ""Yours Truly"",
+	|	""slides"": [
+	|		{
+	|			""type"": ""all"", ""title"": ""Wake up to WonderWidgets!""
+	|		},
+	|		{
+	|			""type"": ""all"",
+	|			""title"": ""Overview"",
+	|			""items"": [
+	|				""Why <em>WonderWidgets</em> are great"",
+	|				""Who <em>buys</em> WonderWidgets""
+	|			]
+	|		}
+	|	]
+	|}";
+
+КонецПроцедуры
+
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

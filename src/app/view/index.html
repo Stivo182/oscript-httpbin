@@ -1,9 +1,39 @@
-<!doctype html>
-<html>
-<head>
-<title></title>
-</head>
-<body>
-
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>oscript-httpbin</title>	
+    <link rel="stylesheet" type="text/css" href="/static/swagger/swagger-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/static/swagger/index.css" />
+	<style>
+		.link {display: none;}
+	</style>
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="/static/swagger/swagger-ui-bundle.js" charset="UTF-8"></script>
+    <script src="/static/swagger/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+    <script>
+		window.onload = function() {
+		  window.ui = SwaggerUIBundle({
+			url: "/static/openapi.json",
+			dom_id: '#swagger-ui',
+			deepLinking: true,
+			presets: [
+			  SwaggerUIBundle.presets.apis,
+			  SwaggerUIStandalonePreset
+			],
+			presets_config: {
+			   SwaggerUIStandalonePreset: {
+				   TopbarPlugin: false
+			   }
+			},
+			plugins: [
+			  SwaggerUIBundle.plugins.DownloadUrl
+			],
+			layout: "StandaloneLayout"
+		  });
+		};
+	</script>
+  </body>
 </html>

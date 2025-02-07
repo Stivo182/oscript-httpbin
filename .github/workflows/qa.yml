@@ -1,0 +1,14 @@
+name: Контроль качества
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  sonar:
+    if: github.repository_owner == 'stivo182'
+    uses: autumn-library/workflows/.github/workflows/sonar.yml@main
+    with:
+      github_repository: stivo182/oscript-httpbin
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

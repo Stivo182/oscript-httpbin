@@ -1,4 +1,9 @@
 # oscript-httpbin
+
+[![Release](https://img.shields.io/github/release/Stivo182/oscript-httpbin.svg)](https://github.com/Stivo182/oscript-httpbin/releases)
+[![Тестирование](https://github.com/stivo182/oscript-httpbin/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/stivo182/oscript-httpbin/actions/workflows/test.yml)
+[![Статус порога качества](https://sonar.openbsl.ru/api/project_badges/measure?project=httpbin&metric=alert_status&token=sqb_2f7c84743fd1b295085c25a1b96cc8d975cd4dc7)](https://sonar.openbsl.ru/dashboard?id=httpbin)
+
 Cервис позволяющий локально тестировать HTTP клиент. Разработан на [OneScript](https://github.com/EvilBeaver/OneScript) + [WINOW](https://github.com/autumn-library/winow). Поддерживает бо́льшую часть эндпоинтов [httpbin.org](https://httpbin.org/).
 
 * 1\. [Установка](#установка)
@@ -158,7 +163,7 @@ _МойЖелудь.os:_
 | `/bytes/:n` | ✅ | ✅ |
 | `/stream-bytes/:n` | ❌ | ✅ |
 | `/links/:n` | ✅ | ✅ |
-| `/links/:n/:offset"` | ✅ | ✅ |
+| `/links/:n/:offset` | ✅ | ✅ |
 | `/image` | ✅ | ✅ |
 | `/image/png` | ✅ | ✅ |
 | `/image/jpeg` | ✅ | ✅ |

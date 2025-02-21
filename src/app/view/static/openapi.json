@@ -261,6 +261,22 @@
         ]
       }
     }, 
+    "/brotli": {
+      "get": {
+        "produces": [
+          "application/json"
+        ], 
+        "responses": {
+          "200": {
+            "description": "Brotli-encoded data."
+          }
+        }, 
+        "summary": "Returns Brotli-encoded data.", 
+        "tags": [
+          "Response formats"
+        ]
+      }
+    }, 
     "/bytes/{n}": {
       "get": {
         "parameters": [
@@ -442,6 +458,22 @@
         ]
       }
     }, 
+    "/deflate": {
+      "get": {
+        "produces": [
+          "application/json"
+        ], 
+        "responses": {
+          "200": {
+            "description": "Defalte-encoded data."
+          }
+        }, 
+        "summary": "Returns Deflate-encoded data.", 
+        "tags": [
+          "Response formats"
+        ]
+      }
+    },
     "/delay/{delay}": {
       "delete": {
         "parameters": [
@@ -639,6 +671,22 @@
         "summary": "The request's query parameters.", 
         "tags": [
           "HTTP Methods"
+        ]
+      }
+    },
+    "/gzip": {
+      "get": {
+        "produces": [
+          "application/json"
+        ], 
+        "responses": {
+          "200": {
+            "description": "GZip-encoded data."
+          }
+        }, 
+        "summary": "Returns GZip-encoded data.", 
+        "tags": [
+          "Response formats"
         ]
       }
     }, 
@@ -1360,6 +1408,22 @@
           }
         }, 
         "summary": "Returns a simple XML document.", 
+        "tags": [
+          "Response formats"
+        ]
+      }
+    },
+    "/zstd": {
+      "get": {
+        "produces": [
+          "application/json"
+        ], 
+        "responses": {
+          "200": {
+            "description": "Zstd-encoded data."
+          }
+        }, 
+        "summary": "Returns Zstd-encoded data.", 
         "tags": [
           "Response formats"
         ]

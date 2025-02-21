@@ -131,9 +131,10 @@ _МойЖелудь.os:_
 | `/anything/:anything` | ✅ | ✅ |
 | `/base64/:value` | ✅ | ✅ |
 | `/encoding/utf8` | ✅ | ✅ |
-| `/gzip` | ❌ | ✅ |
-| `/deflate` | ❌ | ✅ |
-| `/brotli` | ❌ | ✅ |
+| `/gzip` | ✅ | ✅ |
+| `/deflate` | ✅ | ✅ |
+| `/brotli` | ✅ | ✅ |
+| `/zstd` | ✅ | ❌ |
 | `/status/:code` | ✅ | ✅ |
 | `/response-headers?key=val` | ✅ | ✅ |
 | `/redirect/:n` | ✅ | ✅ |

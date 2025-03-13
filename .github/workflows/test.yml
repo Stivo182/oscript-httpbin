@@ -40,7 +40,7 @@ jobs:
         run: |
           set -ex
           version=$(cat packagedef | grep ".Версия(" | sed 's|[^"]*"||' | sed -r 's/".+//' || true)
-          echo "name=compressor-$version.ospx" >> $GITHUB_OUTPUT
+          echo "name=httpbin-$version.ospx" >> $GITHUB_OUTPUT
           
       - name: Установка пакета
         run: opm install --dev ${{ steps.extract_package_name.outputs.name }}

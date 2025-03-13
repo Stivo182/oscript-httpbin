@@ -1,16 +1,49 @@
 name: Тестирование
 
-on:
+on: 
   push:
   pull_request:
-  workflow_dispatch:
+
+env:
+  TEST_SCRIPT_PATH: './tasks/test.os'
+  ADDITIONAL_OSCRIPT_PACKAGES: ''
 
 jobs:
-  test:
+  build:
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        oscript_version: ['stable', 'dev']
-    uses: autumn-library/workflows/.github/workflows/test.yml@main
-    with:
-      oscript_version: ${{ matrix.oscript_version }}
+        os: [macOS-latest, ubuntu-latest, windows-latest]
+        oscript_version: [stable, dev]
+        
+    steps:
+      - name: Актуализация
+        uses: actions/checkout@v4
+      
+      - name: Установка OneScript
+        uses: Stivo182/setup-onescript@fix/macos
+        with:
+          version: ${{ matrix.oscript_version }}
+
+      - name: Установка зависимостей
+        run: |
+          opm install opm
+          opm install -l --dev
+
+      - name: Сборка пакета
+        run: opm build
+
+      - name: Вычисление имени пакета
+        shell: bash
+        id: extract_package_name
+        run: |
+          set -ex
+          version=$(cat packagedef | grep ".Версия(" | sed 's|[^"]*"||' | sed -r 's/".+//' || true)
+          echo "name=compressor-$version.ospx" >> $GITHUB_OUTPUT
+          
+      - name: Установка пакета
+        run: opm install --dev ${{ steps.extract_package_name.outputs.name }}
+        
+      - name: Тестирование
+        run: oscript ${{ env.TEST_SCRIPT_PATH }}

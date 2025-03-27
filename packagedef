@@ -11,7 +11,7 @@
     .ВключитьФайл("autumn-properties.json")
     .ВключитьФайл("README.md")
     .ВключитьФайл("LICENSE")
-    .ЗависитОт("winow", "0.9.2")
+    .ЗависитОт("winow", "0.9.4")
     .ЗависитОт("autumn-cli", "1.1.0")
     .ЗависитОт("compressor")
     .ЗависитОт("1connector")

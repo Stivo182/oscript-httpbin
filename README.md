@@ -1,4 +1,4 @@
-# oscript-httpbin
+# httpbin
 
 [![Release](https://img.shields.io/github/release/Stivo182/oscript-httpbin.svg)](https://github.com/Stivo182/oscript-httpbin/releases)
 [![Тестирование](https://github.com/stivo182/oscript-httpbin/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/stivo182/oscript-httpbin/actions/workflows/test.yml)

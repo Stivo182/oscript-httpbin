@@ -19,4 +19,4 @@
     .РазработкаЗависитОт("asserts")
     .РазработкаЗависитОт("coverage")
     .РазработкаЗависитОт("1commands")
-    .ИсполняемыйФайл("src/cli/HttpBin_cli.os", "httpbin")
+    .ИсполняемыйФайл("src/cmd/main.os", "httpbin")

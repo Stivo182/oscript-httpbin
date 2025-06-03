@@ -26,6 +26,14 @@ opm install httpbin
 
 ## Использование
 
+### CLI приложение
+
+Запуск сервиса через команду **run**: `httpbin run`
+
+Опции команды:</br>
+`-h`, `--host` - имя хоста / IP адрес сервиса</br>
+`-p`, `--port` - порт сервиса
+
 ### Тестирование через [asserts](https://github.com/oscript-library/asserts) и [1connector](https://github.com/vbondarevsky/1connector)
 
 _test.os:_
@@ -59,36 +67,6 @@ _test.os:_
     Ожидаем.Что(Ответ.Json()["args"]["key"]).Равно("value");
 КонецПроцедуры
 ```
-
-### Приложение на фреймворке [autumn](https://github.com/autumn-library/autumn)
-
-_МойЖелудь.os:_
-``` bsl
-#Использовать 1connector
-#Использовать httpbin
-
-&Пластилин 
-Перем HttpBin;
-
-Функция ВыполнитьДействие() Экспорт
-    HttpBin.Запустить();
-    Ответ = КоннекторHTTP.Get(HttpBin.URL() + "/get");
-    HttpBin.Остановить();
-КонецФункции
-
-&Желудь
-Процедура ПриСозданииОбъекта()
-	
-КонецПроцедуры
-```
-
-### CLI приложение
-
-Запуск сервиса через команду **run**: `httpbin run`
-
-Опции команды:</br>
-`-h`, `--host` - имя хоста / IP адрес сервиса</br>
-`-p`, `--port` - порт сервиса
 
 ### Swagger UI
 

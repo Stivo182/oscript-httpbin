@@ -7,25 +7,25 @@
 
 Cервис позволяющий локально тестировать HTTP клиент. Разработан на [OneScript](https://github.com/EvilBeaver/OneScript) + [WINOW](https://github.com/autumn-library/winow). Поддерживает бо́льшую часть эндпоинтов [httpbin.org](https://httpbin.org/).
 
-* 1\. [Установка](#установка)
-* 2\. [Использование](#использование)
-    * 2.1\. [CLI приложение](#cli-приложение)
-    * 2.2\. [Тестирование через asserts и 1connector](#тестирование-через-asserts-и-1connector)
+* 1\. [Установка](#installation)
+* 2\. [Использование](#usage)
+    * 2.1\. [CLI приложение](#cli-app)
+    * 2.2\. [Тестирование через asserts и 1connector](#testing)
     * 2.3\. [Swagger UI](#swagger-ui)
-* 3\. [Совместимость](#совместимость)
-* 4\. [Программный интерфейс](#программный-интерфейс)
-* 5\. [Ограничения](#ограничения)
-* 6\. [Сравнение с httpbin.org](#сравнение-с-httpbinorg)
+* 3\. [Совместимость](#compatibility)
+* 4\. [Программный интерфейс](#api)
+* 5\. [Ограничения](#limitations)
+* 6\. [Сравнение с httpbin.org](#comparison)
 
-## Установка
+## Установка <a name="installation"></a>
 
 ``` bash
 opm install httpbin
 ```
 
-## Использование
+## Использование <a name="usage"></a>
 
-### CLI приложение
+### CLI приложение <a name="cli-app"></a>
 
 Запуск сервиса через команду **run**: `httpbin run`
 
@@ -33,7 +33,7 @@ opm install httpbin
 `-h`, `--host` - имя хоста / IP адрес сервиса</br>
 `-p`, `--port` - порт сервиса
 
-### Тестирование через [asserts](https://github.com/oscript-library/asserts) и [1connector](https://github.com/vbondarevsky/1connector)
+### Тестирование через [asserts](https://github.com/oscript-library/asserts) и [1connector](https://github.com/vbondarevsky/1connector) <a name="testing"></a>
 
 _test.os:_
 ``` bsl
@@ -71,7 +71,7 @@ _test.os:_
 
 На стартовой странице сервиса (адрес по умолчанию: `http://127.0.0.1:3334`) доступна визуальная документация API, а также возможность отправки запросов и получения ответов.
 
-## Совместимость
+## Совместимость <a name="compatibility"></a>
 
 <table>
   <thead>
@@ -101,7 +101,7 @@ _test.os:_
   </tbody>
 </table>
 
-## Программный интерфейс
+## Программный интерфейс <a name="api"></a>
 
 ### Класс `HttpBin`
 
@@ -121,11 +121,11 @@ _test.os:_
 | `ОжидатьЗапуск(<Флаг>)` | Ожидать завершение запуска сервиса, запущенного в фоновом режиме |
 | `УстановитьТаймаутОжидания(<Таймаут>)` | Устанавливает таймаут ожидания запуска сервиса, запущенного в фоновом режиме |
 
-## Ограничения
+## Ограничения <a name="limitations"></a>
 
 На данный момент нет поддержки https.
 
-## Сравнение с httpbin.org
+## Сравнение с httpbin.org <a name="comparison"></a>
 
 | Эндпоинт | oscript-httpbin | httpbin.org |
 | --- | :-: | :-: |

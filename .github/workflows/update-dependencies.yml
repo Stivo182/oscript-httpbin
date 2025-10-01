@@ -2,7 +2,7 @@ name: Обновление зависимостей
 
 on:
   schedule:
-    - cron: '0 8 * * *' # Ежедневно в 8:00 утра
+    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:

@@ -1216,7 +1216,7 @@
 КонецФункции
 
 Функция URL(АдресРсесурса)
-	Возврат СтрШаблон("%1/%2", HttpBin.URL(), АдресРсесурса);
+	Возврат HttpBin.URL(АдресРсесурса);
 КонецФункции
 
 Функция ПараметрыКоннектора(Заголовки = Неопределено)
@@ -1235,5 +1235,5 @@
 КонецФункции
 
 Функция Base64ZipФайла()
-	Возврат "UEsDBAoAAAAAAEAIalpdCci4BwAAAAcAAAALAAAAaHR0cGJpbi50eHRIVFRQQklOUEsBAh8ACgAAAAAAQAhqWl0JyLgHAAAABwAAAAsAJAAAAAAAAAAgAAAAAAAAAGh0dHBiaW4udHh0CgAgAAAAAAABABgAYXX04T6R2wFhdfThPpHbAdjuOJY+kdsBUEsFBgAAAAABAAEAXQAAADAAAAAAAA==";
+	Возврат "UEsDBAoAAAAAAEAIalpdCci4BwAAAAcAAAALAAAAaHR0cGJpbi50eHRIVFRQQklOUEsBAh8ACgAAAAAAQAhqWl0JyLgHAAAABwAAAAsAJAAAAAAAAAAgAAAAAAAAAGh0dHBiaW4udHh0CgAgAAAAAAABABgAYXX04T6R2wFhdfThPpHbAdjuOJY+kdsBUEsFBgAAAAABAAEAXQAAADAAAAAAAA=="; // BSLLS:LineLength-off
 КонецФункции

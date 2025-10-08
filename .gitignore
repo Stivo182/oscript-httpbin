@@ -1,5 +1,8 @@
-.vscode/*
-coverage/*
-out/*
-oscript_modules/*
+# OneScript
+Components/
+out/
+oscript_modules/
 *.ospx
+
+# VS Code
+.vscode/

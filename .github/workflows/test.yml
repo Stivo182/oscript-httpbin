@@ -11,7 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         oscript_version: ['default', 'lts']
-        test_engine: '1testrunner'
+        test_engine: ['1testrunner']
         include:
           - oscript_version: ['stable', 'dev']
             test_engine: 'oneunit'

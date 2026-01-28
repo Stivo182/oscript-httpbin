@@ -3,6 +3,7 @@
 [![Release](https://img.shields.io/github/release/Stivo182/oscript-httpbin.svg)](https://github.com/Stivo182/oscript-httpbin/releases)
 [![Тестирование](https://github.com/stivo182/oscript-httpbin/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/stivo182/oscript-httpbin/actions/workflows/test.yml)
 [![Статус порога качества](https://sonar.openbsl.ru/api/project_badges/measure?project=httpbin&metric=alert_status&token=sqb_2f7c84743fd1b295085c25a1b96cc8d975cd4dc7)](https://sonar.openbsl.ru/dashboard?id=httpbin)
+[![Used by](https://litrosbadges.ru/package/httpbin.svg)](https://litrosbadges.ru/package/httpbin)
 
 Локальный сервис для тестирования и отладки HTTP-запросов, реализованный на [OneScript](https://github.com/EvilBeaver/OneScript) с использованием фреймворка [WINOW](https://github.com/autumn-library/winow). 
 Проект предоставляет функциональность, аналогичную [httpbin.org](https://httpbin.org/), поддерживая большинство оригинальных эндпоинтов.

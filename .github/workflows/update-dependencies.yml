@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Обновление зависимостей
-        uses: Stivo182/depos-action@main
+        uses: Stivo182/depos-action@v1
         with:
           message-prefix: build(deps)
           token: ${{ secrets.PUSH_TOKEN }}

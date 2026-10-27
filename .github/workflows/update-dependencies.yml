@@ -15,3 +15,4 @@ jobs:
         with:
           message-prefix: build(deps)
           token: ${{ secrets.PUSH_TOKEN }}
+          engine: auto
